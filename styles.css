@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.comparison-group {
+    margin-bottom: 40px; /* Increased margin to separate each group */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comparison-container {
+    width: 1280px;
+    height: 720px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.description {
+    width: 1280px;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 18px;
+    color: #000; /* Assuming you want black text */
+    background-color: #fff; /* White background to differentiate from video */
+}
+
+.comparison-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.comparison-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+video {
+    width: 1280px; /* Set fixed width to match video resolution */
+    height: 720px; /* Set fixed height to match video resolution */
+    object-fit: cover;
+}
+
+.comparison-video video:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    clip-path: inset(0 50% 0 0);
+    transform: translateX(-50%);
+}
+
+.slider-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px; /* Increased width to accommodate round button */
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+.slider-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background-color: white;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.slider {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 2px solid white; /* Add white border */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    cursor: ew-resize;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.slider-arrow-left, .slider-arrow-right {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}   
+    
+.slider-arrow-left {
+    border-width: 10px 15px 10px 0;
+    border-color: transparent white transparent transparent;
+    left: 10px; 
+}
+
+.slider-arrow-right {
+    border-width: 10px 0 10px 15px;
+    border-color: transparent transparent transparent white;
+    right: 10px;
+}   
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1280px;
+    padding: 10px 0;
+    background-color: #fff;
+    margin-top: 10px; /* Add margin to separate from video container */
+}
+
+.playPauseBtn {
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+
+.timeBar {
+    width: 100%;
+    max-width: 600px;
+}
+
