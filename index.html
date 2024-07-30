@@ -6,15 +6,16 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <div class="comparison-group">
-        <div class="description">Description 1</div>
+        <div class="description">Positive Example 1: sample_0074.mp4 639kbps, MOS:-6.04, Left: 1x Model, Right: webex_2x</div>
         <div class="comparison-container">
             <div class="comparison-wrapper">
                 <div class="comparison-video">
                     <!-- Video on the left -->
-                    <video id="video1" src="sample_0127_rp228.mp4" loop autoplay muted></video>
+                    <video id="video1" src="sample_0074_wx2x_639kbps.mp4" loop autoplay muted></video>
                     <!-- Video on the right -->
-                    <video id="video2" src="sample_0127_rp408.mp4" loop autoplay muted></video>
+                    <video id="video2" src="sample_0074_rp228_639kbps.mp4" loop autoplay muted></video>
                 </div>
                 <div class="slider-wrapper">
                     <div class="slider-line"></div>
@@ -31,16 +32,15 @@
         </div>
     </div>
 
-    <!-- Repeat the above block for each group of videos -->
     <div class="comparison-group">
-        <div class="description">Description 2</div>
+        <div class="description">Positive Example 2: sample_0148.mp4 470kbps, MOS:-23.81, Left: 1x Model, Right: webex_2x</div>
         <div class="comparison-container">
             <div class="comparison-wrapper">
                 <div class="comparison-video">
                     <!-- Video on the left -->
-                    <video id="video3" src="sample_0127_wx2x.mp4" loop autoplay muted></video>
+                    <video id="video3" src="sample_0148_wx2x_470kbps.mp4" loop autoplay muted></video>
                     <!-- Video on the right -->
-                    <video id="video4" src="sample_0127_rp408.mp4" loop autoplay muted></video>
+                    <video id="video4" src="sample_0148_rp228_470kbps.mp4" loop autoplay muted></video>
                 </div>
                 <div class="slider-wrapper">
                     <div class="slider-line"></div>
@@ -57,18 +57,16 @@
         </div>
     </div>
 
-    <!-- Repeat the above block for each group of videos -->
-    <!-- Add three more comparison-group blocks here -->
 
     <div class="comparison-group">
-        <div class="description">Description 2</div>
+        <div class="description">Negative Example 1: Sample_0052.mp4, 639kbps MOS:15.72, Left: 1x Model, Right: webex_2x</div>
         <div class="comparison-container">
             <div class="comparison-wrapper">
                 <div class="comparison-video">
                     <!-- Video on the left -->
-                    <video id="video3" src="sample_0073_wx2x_470kbps.mp4" loop autoplay muted></video>
+                    <video id="video5" src="sample_0052_wx2x_639kbps.mp4" loop autoplay muted></video>
                     <!-- Video on the right -->
-                    <video id="video4" src="sample_0073_rp408_470kbps.mp4" loop autoplay muted></video>
+                    <video id="video6" src="sample_0052_rp228_639kbps.mp4" loop autoplay muted></video>
                 </div>
                 <div class="slider-wrapper">
                     <div class="slider-line"></div>
@@ -84,6 +82,32 @@
             <input type="range" class="timeBar" min="0" value="0">
         </div>
     </div>
+
+    <div class="comparison-group">
+        <div class="description">Negative Example 2: Sample_0051.mp4, MOS:12.04, Left: 1x Model, Right: webex_2x</div>
+        <div class="comparison-container">
+            <div class="comparison-wrapper">
+                <div class="comparison-video">
+                    <!-- Video on the left -->
+                    <video id="video7" src="sample_0051_wx2x_639kbps.mp4" loop autoplay muted></video>
+                    <!-- Video on the right -->
+                    <video id="video8" src="sample_0051_rp228_639kbps.mp4" loop autoplay muted></video>
+                </div>
+                <div class="slider-wrapper">
+                    <div class="slider-line"></div>
+                    <div class="slider">
+                        <div class="slider-arrow-left"></div>
+                        <div class="slider-arrow-right"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <button class="playPauseBtn">Play/Pause</button>
+            <input type="range" class="timeBar" min="0" value="0">
+        </div>
+    </div>
+
 
     <script src="script.js"></script>
 </body>
